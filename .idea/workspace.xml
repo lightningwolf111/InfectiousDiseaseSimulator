@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="InfectiousDiseaseSimluator:warexploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bf9d7049-d573-4a9d-b715-1b3eaea425e9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lAEDsdd22mn8yqhSFt4TViON8S" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf9d7049-d573-4a9d-b715-1b3eaea425e9" name="Default Changelist" comment="" />
+      <created>1607031378554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607031378554</updated>
+      <workItem from="1607031380538" duration="1447000" />
+      <workItem from="1607032860957" duration="6277000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="288" y="93" key="#Project_Structure" timestamp="1607032399010">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="288" y="93" key="#Project_Structure/0.23.1440.837@0.23.1440.837" timestamp="1607032399010" />
+    <state x="152" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607032247628">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="152" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837@0.23.1440.837" timestamp="1607032247628" />
+    <state x="434" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1607309934135">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="434" y="136" key="#com.intellij.ide.util.MemberChooser/0.23.1440.837@0.23.1440.837" timestamp="1607309934135" />
+    <state x="176" y="23" key="SettingsEditor" timestamp="1607032991443">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="176" y="23" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1607032991443" />
+    <state x="82" y="33" key="new project wizard" timestamp="1607051234322">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="82" y="33" key="new project wizard/0.23.1440.837/0.-1417.2560.1417@0.23.1440.837" timestamp="1607051234322" />
+  </component>
+</project>
