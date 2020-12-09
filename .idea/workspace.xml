@@ -6,7 +6,20 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf9d7049-d573-4a9d-b715-1b3eaea425e9" name="Default Changelist" comment="" />
+    <list default="true" id="bf9d7049-d573-4a9d-b715-1b3eaea425e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/InfectiousDiseaseSimluator_warexploded/InfectiousDiseaseSimluator_warexploded.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InfectiousDiseaseSimluator_warexploded/InfectiousDiseaseSimluator_warexploded.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/RoomLogic/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/RoomLogic/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/RoomLogic/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/RoomLogic/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/SimulatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/SimulatorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoomLogic/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomLogic/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoomLogic/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomLogic/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimulatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimulatorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/master.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/master.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +33,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lAEDsdd22mn8yqhSFt4TViON8S" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,12 +45,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -58,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607031378554</updated>
       <workItem from="1607031380538" duration="1447000" />
-      <workItem from="1607032860957" duration="6277000" />
+      <workItem from="1607032860957" duration="13888000" />
     </task>
     <servers />
   </component>
@@ -74,17 +93,21 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="152" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.837@0.23.1440.837" timestamp="1607032247628" />
-    <state x="434" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1607309934135">
+    <state x="434" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1607451476838">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="434" y="136" key="#com.intellij.ide.util.MemberChooser/0.23.1440.837@0.23.1440.837" timestamp="1607309934135" />
-    <state x="176" y="23" key="SettingsEditor" timestamp="1607032991443">
+    <state x="434" y="136" key="#com.intellij.ide.util.MemberChooser/0.23.1440.837@0.23.1440.837" timestamp="1607451476838" />
+    <state x="176" y="23" key="SettingsEditor" timestamp="1607312282120">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
-    <state x="176" y="23" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1607032991443" />
+    <state x="176" y="23" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1607312282120" />
     <state x="82" y="33" key="new project wizard" timestamp="1607051234322">
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="82" y="33" key="new project wizard/0.23.1440.837/0.-1417.2560.1417@0.23.1440.837" timestamp="1607051234322" />
+    <state x="353" y="184" width="670" height="676" key="search.everywhere.popup" timestamp="1607460600537">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="353" y="184" width="670" height="676" key="search.everywhere.popup/0.23.1440.837@0.23.1440.837" timestamp="1607460600537" />
   </component>
 </project>

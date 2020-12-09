@@ -10,16 +10,52 @@
   <head>
     <title>Infectious Disease Simulator</title>
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.js"></script>
-    <script src="master.js?3" type="text/javascript"></script>
+    <script src="master.js?4" type="text/javascript"></script>
     <link rel="icon" href="https://solarsystem.nasa.gov/system/basic_html_elements/11561_Sun.png">
   </head>
   <body>
-    <h1>Running IDS through Heroku</h1>
+    <h1>Infectious Disease Simulator</h1>
+    <p>
+      This project models the transmission rates for an infectious disease.
+      The project specifically models the transmission of an infectious disease who's transmission chance falls with distance
+      among people in a shared space (Room). However, this model can also be used to predict transmission more generally across
+      geographic regions, in which case the "Room" would represent for instance a country and a "Person" a city.
+      This more general view works well with our model because each "Person" is assigned a chance of catching the disease,
+      which can be seen as the percentage of people in the are with the disease.
+      <br/>
+      There is a relatively simple and reasonable mathematical model that can be applied to the spread of diseases, upon which we improve.
+      In this model, all people are constantly in contact, and there is a chance of disease transmission whenever a healthy and infected individual meet.
+      <br/>
+      Mathematically, let I(t) be the number of infected individuals. Then
+      <br/>
+      dI/dt = k(I)(P-I),
+      <br/>
+      where k is the transmission coefficient and P is the total population size. It can be shown that this model gives a logistic equation for the spread of the disease.
+      <br/>
+      Our model uses simulation to generalize one of the most limiting assumptions of the above mathematical model: that people are always mutually in contact.
+      We use a matrix model to represent the spread of disease, where people sufficiently far from each other have no chance of transmitting the disease,
+      and where more generally transmission chance is distance dependent. This naturally loses some accuracy, since the passage of time must be broken into discrete chunks.
+      We solve this problem by simulating transmission a small time interval to accurately approximate results.
+      <br/>
+      Transmission chances and the simulation more generally are modelled of off medical data about COVID-19.
+      <br/>
+      Enjoy!
+    </p>
+
+    <h3>Enter the dimension for the Room, an integer between 1 and 100.</h3>
+    <h3>Enter the numbers where you want people to be placed from 0 to the size of the Room squared minus 1. Squares are indexed from left to right, and then from top to bottom.</h3>
+    <h3>Alternatively, type "autofill" for a full Room.</h3>
+    <h3>People are randomly assigned as infected or healthy.</h3>
+
+    <p>The decimals in the Results matrix represent the chance of the person in that location becoming infected.</p>
+
     <form method="get" action="Simulate">
       <input type="number" id="roomSizeChooser" name="roomSize" />
+      <input type="String" id="personSet" name="personSet" />
       <input type="submit" value="Submit" />
     </form>
-  <h2> <%= request.getParameter("roomSize")%> </h2>
-    <h2> <%= request.getAttribute("this")%> </h2>
+  <h2 id = "dimension"> Room Size: <%= request.getParameter("roomSize")%> </h2>
+    <h2 id = "originalMatrix"> Input Room: <br/> <%= request.getAttribute("originalMatrix")%> </h2>
+    <h2 id = "chanceMatrix"> Result: <br/> <%= request.getAttribute("chanceMatrix")%> </h2>
   </body>
 </html>

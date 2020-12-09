@@ -23,18 +23,16 @@ public class SimulatorServlet extends HttpServlet{
         System.out.println("Servlet called" + request.getContentLength());
         response.setContentType("application/json;charset=UTF-8");
         //ServletOutputStream out = response.getOutputStream();
-        re = new JSONObject();
-        re.put("keyOfJSON", "valueOfJSON!");
+
 
         System.out.println(request.getParameter("roomSize"));
-        if (request.getParameter("roomSize") != null) {
-            re.put("size", request.getParameter("roomSize"));
+        System.out.println(request.getParameter("personSet"));
 
-        }
 
-        Room room = new Room(Integer.parseInt(request.getParameter("roomSize")));
 
-        request.setAttribute("this", room.chanceMatrix().toString());
+        Room room = new Room(Integer.parseInt(request.getParameter("roomSize")), request.getParameter("personSet"));
+        request.setAttribute("originalMatrix", room.toString());
+        request.setAttribute("chanceMatrix", room.chanceMatrix().toString());
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 
 //        out.print(re.toString());

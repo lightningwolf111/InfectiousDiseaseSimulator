@@ -1,26 +1,47 @@
 package RoomLogic;
-
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
+import RoomLogic.Person;
 
 public class Room {
     private int dimension;
     private Person[][] room;
+    private String input;
 
-    // Constructs a new room of the specified dimension, full of random people
-    public Room(int dimension){
-        this.dimension = dimension;
-        Random random = new Random();
-        room = new Person[dimension][dimension];
-        for(int i = 0; i < dimension; i++){
-            for(int j = 0; j < dimension; j++){
-                if (random.nextBoolean()) {
-                    room[i][j] = new Person(1, i, j);
-                } else {
-                    room[i][j] = new Person(0, i, j);
+    public Room(int dimension, String input){
+        try{
+            this.dimension = dimension;
+            Random random = new Random();
+            room = new Person[dimension][dimension];
+            if(input.equalsIgnoreCase("autofill")){
+                input = "";
+                for(int i = 0; i < dimension * dimension; i++){
+                    input += i + ",";
                 }
-
             }
+            this.input = input;
+
+            Set<String> peopleSet = new HashSet<>();
+            for(String person : Arrays.asList(input.split(","))){
+                peopleSet.add(person);
+            }
+
+            for(int i = 0; i < dimension; i++){
+                for(int j = 0; j < dimension; j++){
+                    String currentLocation = new Integer((dimension * i) + j).toString();
+                    if(peopleSet.contains(currentLocation)){
+                        if (random.nextBoolean()) {
+                            room[i][j] = new Person(1, i, j);
+                        }
+                        else {
+                            room[i][j] = new Person(0, i, j);
+                        }
+                    }
+                }
+            }
+        }
+        catch(Exception e){
+            System.out.println("Invalid Input!!!");
+            System.out.println("Make sure the dimension is an integer value, and the room input is valid");
         }
     }
 
@@ -39,39 +60,69 @@ public class Room {
         }
     }
 
-    
 
-    public void printRoom(){
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
         for(int i = 0; i < dimension; i++){
             for(int j = 0; j < dimension; j++){
-                double chance = room[i][j].isDiseasedChance();
-                if ((chance * 100) % 10 == 0) {
-                    System.out.print(room[i][j].isDiseasedChance() + "  ");
-                } else {
-                    System.out.print(room[i][j].isDiseasedChance() + " ");
+                if(room[i][j] != null){
+                    double chance = room[i][j].isDiseasedChance();
+                    if ((chance * 100) % 10 == 0) {
+                        sb.append(room[i][j].isDiseasedChance() + "  ");
+                    } else {
+                        sb.append(room[i][j].isDiseasedChance() + " ");
+                    }
+                }
+                else{
+                    sb.append("---- ");
                 }
             }
-            System.out.println();
+            sb.append("<br/>");
         }
+        return sb.toString();
     }
+
+//    public void printRoom(){
+//        for(int i = 0; i < dimension; i++){
+//            for(int j = 0; j < dimension; j++){
+//                if(room[i][j] != null){
+//                    double chance = room[i][j].isDiseasedChance();
+//                    if ((chance * 100) % 10 == 0) {
+//                        System.out.print(room[i][j].isDiseasedChance() + "  ");
+//                    } else {
+//                        System.out.print(room[i][j].isDiseasedChance() + " ");
+//                    }
+//                }
+//                else{
+//                    System.out.print("-- ");
+//                }
+//            }
+//            System.out.println();
+//        }
+//    }
 
     // Returns the chance of a specific person catching the infectious disease.
     // The person with the given x and y.
     public double chance(int x, int y){
-        if (room[x][y].isDiseasedChance() == 1) {
-            return 1;
-        }
-        double chance = room[x][y].isDiseasedChance();
-        Person temp = room[x][y];
-        for(int i = 0; i < dimension; i++){ // I think indices are better since it guarantees logical order
-            for(int j = 0; j < dimension; j++){
-                if (!(x==i && y == j)) {
-                    double addedChance = (1 - chance) * temp.transmissionChance(room[i][j], temp);
-                    //System.out.print(" chance: " + round(addedChance) + " i: " + i + " j: " + j + " ");
-                    chance += addedChance;
-                }
+        double chance = -1.0;
+        if(room[x][y] != null){
+            if (room[x][y].isDiseasedChance() == 1) {
+                return 1;
             }
-            //System.out.println();
+            chance = room[x][y].isDiseasedChance();
+            Person temp = room[x][y];
+            for(int i = 0; i < dimension; i++){
+                for(int j = 0; j < dimension; j++){
+                    if (!(x == i && y == j) && (room[i][j] != null)) {
+                        double addedChance = (1 - chance) * temp.transmissionChance(room[i][j], temp);
+                        //System.out.print(" chance: " + round(addedChance) + " i: " + i + " j: " + j + " ");
+                        chance += addedChance;
+                    }
+                }
+                //System.out.println();
+            }
         }
         return round(chance);
     }
@@ -79,10 +130,13 @@ public class Room {
     // Returns a 2D array of each person in the room's chance of getting infected
     // with the infectious disease.
     public Room chanceMatrix(){
-        Room toReturn = new Room(dimension);
+        Room toReturn = new Room(dimension, input);
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
-                toReturn.setPerson(i, j, new Person(chance(i, j), i, j));
+                double chance = chance(i,j);
+                if (chance != -1) {
+                    toReturn.setPerson(i, j, new Person(chance, i, j));
+                }
             }
         }
         return toReturn;
