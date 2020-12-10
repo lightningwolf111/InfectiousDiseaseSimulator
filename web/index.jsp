@@ -11,6 +11,7 @@
     <title>Infectious Disease Simulator</title>
     <script type="text/javascript" src="//code.jquery.com/jquery-latest.js"></script>
     <script src="master.js?4" type="text/javascript"></script>
+    <link href="/main.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="https://solarsystem.nasa.gov/system/basic_html_elements/11561_Sun.png">
   </head>
   <body>
@@ -37,7 +38,7 @@
       and where more generally transmission chance is distance dependent. This naturally loses some accuracy, since the passage of time must be broken into discrete chunks.
       We solve this problem by simulating transmission a small time interval to accurately approximate results.
       <br/>
-      Transmission chances and the simulation more generally are modelled of off medical data about COVID-19.
+      Transmission chances and the simulation more generally are modelled off of medical data about COVID-19.
       <br/>
       Enjoy!
     </p>
