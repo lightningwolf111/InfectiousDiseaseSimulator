@@ -6,6 +6,7 @@ public class Room {
     private int dimension;
     private Person[][] room;
     private String input;
+    private String input2;
 
     public Room(int dimension, String input){
         try{
@@ -45,6 +46,54 @@ public class Room {
         }
     }
 
+
+    public Room(int dimension, String input, String healthyPeople){
+        try{
+            this.dimension = dimension;
+            Random random = new Random();
+            room = new Person[dimension][dimension];
+            if(input.equalsIgnoreCase("autofill")){
+                room = createFullRoom(dimension);
+            } else {
+                this.input = input;
+
+                Set<String> infectedPeopleSet = new HashSet<>();
+                for (String person : Arrays.asList(input.split(","))) {
+                    infectedPeopleSet.add(person);
+                }
+
+                if (healthyPeople.equalsIgnoreCase("autofill")) {
+                    healthyPeople = "";
+                    for (int i = 0; i < dimension * dimension; i++) {
+                        healthyPeople += i + ",";
+                    }
+                }
+                this.input2 = healthyPeople;
+
+                Set<String> notInfectedPeopleSet = new HashSet<>();
+                for (String person : Arrays.asList(healthyPeople.split(","))) {
+                    notInfectedPeopleSet.add(person);
+                }
+
+                for (int i = 0; i < dimension; i++) {
+                    for (int j = 0; j < dimension; j++) {
+                        String currentLocation = new Integer((dimension * i) + j).toString();
+                        if (infectedPeopleSet.contains(currentLocation)) {
+                            room[i][j] = new Person(1, i, j);
+                        }
+                        if (notInfectedPeopleSet.contains(currentLocation)) {
+                            room[i][j] = new Person(0, i, j);
+                        }
+                    }
+                }
+            }
+        }
+        catch(Exception e){
+            System.out.println("Invalid Input!!!");
+            System.out.println("Make sure the dimension is an integer value, and the room input is valid");
+        }
+    }
+
     public Room(int dimension, Person[][] room) {
         this.dimension = dimension;
         this.room = room;
@@ -60,6 +109,22 @@ public class Room {
                 }
             }
         }
+    }
+
+    private Person[][] createFullRoom(int dimension) {
+        room = new Person[dimension][dimension];
+        Random random = new Random();
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
+                if (random.nextBoolean()) {
+                    room[i][j] = new Person(1, i, j);
+                }
+                else {
+                    room[i][j] = new Person(0, i, j);
+                }
+            }
+        }
+        return room;
     }
 
 

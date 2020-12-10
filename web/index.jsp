@@ -45,16 +45,20 @@
     <p>The decimals in the Results matrix represent the chance of the person in that location becoming infected.</p>
 
     <form method="get" action="Simulate">
-      <h3>Enter the dimension for the Room, an integer between 1 and 100</h3>
+      <h4>Enter the dimension for the Room, an integer between 1 and 100</h4>
       <input type="number" id="roomSizeChooser" name="roomSize" />
-      <h3>Enter the numbers where you want people to be placed from 0 to the size of the Room squared minus 1. Squares are indexed from left to right, and then from top to bottom.</h3>
-      <h3>Alternatively, type "autofill" for a full Room.</h3>
-      <h3>People are randomly assigned as infected or healthy.</h3>
-      <input type="String" id="personSet" name="personSet" />
-      <h3>The final parameter is the time, in hours, for which the people are in the room</h3>
+      <h4>Enter the numbers where you want people to be placed from 0 to the size of the Room squared minus 1. Squares are indexed from left to right, and then from top to bottom.</h4>
+      <h4>The first input is the people originally carrying the disease, the second is for those originally healthy.</h4>
+      <input type="String" id="infectedPersonSet" name="infectedPersonSet" />
+      <input type="String" id="nonInfectedPersonSet" name="nonInfectedPersonSet" />
+
+      <h4>Alternatively, type "autofill" in the first box for a full Room with people who may or may not have the disease at random.</h4>
+
+      <h4>The final parameter is the time, in hours, for which the people are in the room</h4>
       <input type="number" id="timeInterval" name="timeInterval" value = "1"/>
       <input type="submit" value="Submit" />
     </form>
+    <h3>The chances of each person contracting the disease will be printed below!</h3>
   <h2 id = "dimension"> Room Size: <%= request.getParameter("roomSize")%> </h2>
     <h2 id = "originalMatrix"> Input Room: <br/> <%= request.getAttribute("originalMatrix")%> </h2>
     <h2 id = "chanceMatrix"> Result: <br/> <%= request.getAttribute("chanceMatrix")%> </h2>
