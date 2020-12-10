@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf9d7049-d573-4a9d-b715-1b3eaea425e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/InfectiousDiseaseSimluator_warexploded/InfectiousDiseaseSimluator_warexploded.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/InfectiousDiseaseSimluator_warexploded/InfectiousDiseaseSimluator_warexploded.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/RoomLogic/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InfectiousDiseaseSimulator/RoomLogic/Person.class" afterDir="false" />
@@ -18,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/src/RoomLogic/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomLogic/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimulatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimulatorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/master.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/master.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +75,7 @@
       <updated>1607031378554</updated>
       <workItem from="1607031380538" duration="1447000" />
       <workItem from="1607032860957" duration="13888000" />
+      <workItem from="1607535376570" duration="2227000" />
     </task>
     <servers />
   </component>
@@ -101,6 +99,10 @@
       <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="176" y="23" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1607312282120" />
+    <state x="344" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1607556186196">
+      <screen x="0" y="23" width="1440" height="826" />
+    </state>
+    <state x="344" y="261" key="com.intellij.ide.util.TipDialog/0.23.1440.826@0.23.1440.826" timestamp="1607556186196" />
     <state x="82" y="33" key="new project wizard" timestamp="1607051234322">
       <screen x="0" y="23" width="1440" height="837" />
     </state>

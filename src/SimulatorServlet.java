@@ -24,21 +24,13 @@ public class SimulatorServlet extends HttpServlet{
         response.setContentType("application/json;charset=UTF-8");
         //ServletOutputStream out = response.getOutputStream();
 
-
         System.out.println(request.getParameter("roomSize"));
         System.out.println(request.getParameter("personSet"));
 
-
-
         Room room = new Room(Integer.parseInt(request.getParameter("roomSize")), request.getParameter("personSet"));
         request.setAttribute("originalMatrix", room.toString());
-        request.setAttribute("chanceMatrix", room.chanceMatrix().toString());
+        request.setAttribute("chanceMatrix", room.chanceMatrix(Integer.valueOf(request.getParameter("timeInterval"))).toString());
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-
-//        out.print(re.toString());
-        //out.flush();
-        //out.close();
-
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -42,16 +42,17 @@
       Enjoy!
     </p>
 
-    <h3>Enter the dimension for the Room, an integer between 1 and 100.</h3>
-    <h3>Enter the numbers where you want people to be placed from 0 to the size of the Room squared minus 1. Squares are indexed from left to right, and then from top to bottom.</h3>
-    <h3>Alternatively, type "autofill" for a full Room.</h3>
-    <h3>People are randomly assigned as infected or healthy.</h3>
-
     <p>The decimals in the Results matrix represent the chance of the person in that location becoming infected.</p>
 
     <form method="get" action="Simulate">
+      <h3>Enter the dimension for the Room, an integer between 1 and 100</h3>
       <input type="number" id="roomSizeChooser" name="roomSize" />
+      <h3>Enter the numbers where you want people to be placed from 0 to the size of the Room squared minus 1. Squares are indexed from left to right, and then from top to bottom.</h3>
+      <h3>Alternatively, type "autofill" for a full Room.</h3>
+      <h3>People are randomly assigned as infected or healthy.</h3>
       <input type="String" id="personSet" name="personSet" />
+      <h3>The final parameter is the time, in hours, for which the people are in the room</h3>
+      <input type="number" id="timeInterval" name="timeInterval" value = "1"/>
       <input type="submit" value="Submit" />
     </form>
   <h2 id = "dimension"> Room Size: <%= request.getParameter("roomSize")%> </h2>

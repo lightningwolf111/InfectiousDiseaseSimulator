@@ -6,7 +6,7 @@ public class Person {
     private int locationY;  // Y coordinate
     private boolean masked; // Determines whether person is masked
     public static final int DISTANCE_BETWEEN_PEOPLE = 7; // scalar for distance between people
-    public static final int TIME_FACTOR = 10; // scales transmission chances to represent how long people are in contact
+    public static final int TIME_FACTOR = 100; // scales transmission chances to represent how long people are in contact
 
     // Creates a person with a given diseasedChance and location
     public Person(double diseasedChance, int locationX, int locationY) {
